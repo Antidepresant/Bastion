@@ -26,6 +26,7 @@
     src: url(../fonts/Roboto-Regular.ttf);
 }
 #wrapper {
+    position: relative;
     width: 100%;
     min-width: 320px;
     height: 100%;
@@ -175,7 +176,25 @@ header {
     text-align: center;
     margin-top: 20px;
 }
+#touch-menu {
+    position: absolute;
+    display: block;
+    left: 2.5%;
+    top: 17px;
+    width: 32px;
+    height: 17px;
+    background: url(../img/menu-button-sprite.png) no-repeat 0 0;
+}
+#touch-menu:hover {
+    background-position: 0 -17px;
+}
+
 nav {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 3px;
     padding: 10px 0 8px;
     background: url(../img/nav-bg.png) repeat 0 0;
     text-align: center;
@@ -283,7 +302,7 @@ nav .container {
     position: relative;
 }
 .menu-logo,
-.menu-exit {
+#menu-exit {
     position: absolute;
     display: block;
 }
@@ -291,11 +310,11 @@ nav .container {
     top: 0;
     left: 0;
 }
-.menu-exit {
+#menu-exit {
     top: 0;
     right: 0;
 }
 .logo img,
-.exit img {
+#menu-exit img {
     vertical-align: bottom;
 }
